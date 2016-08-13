@@ -1,0 +1,38 @@
+body {
+	background: url("../images/train_station.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+h1, h3 {
+   
+   text-shadow:
+      3px 3px 0 #000000,
+     -1px -1px 0 #000000,
+      1px -1px 0 #000000,
+     -1px 1px 0 #000000,
+      1px 1px 0 #000000;
+	text-align: center;
+}
+
+th {
+	text-shadow:
+      1px 1px 0 #000000,
+     -1px -1px 0 #000000,
+      1px -1px 0 #000000,
+     -1px 1px 0 #000000,
+      1px 1px 0 #000000;
+}
+
+label {
+	text-shadow:
+      1px 1px 0 #000000,
+     -1px -1px 0 #000000,
+      1px -1px 0 #000000,
+     -1px 1px 0 #000000,
+      1px 1px 0 #000000;
+}
+
+

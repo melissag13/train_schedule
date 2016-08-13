@@ -1,29 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
 	<title>Train Schedule</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
-	<script type="text/javascript" src="http://momentjs.com/downloads/moment.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+	<script src="http://momentjs.com/downloads/moment.js"></script>
 </head>
 <body>
 
+<div class="container">
 
+	<!-- Jumbotron -->
+	<div class="jumbotron" style="background-color: transparent; color: white">
+		<h1 class="text-center">Train Schedule</h1>
+		<h3 class="text-center">Don't be a Train Wreck, Get the Information You Need</h3>
+	</div>
 
+	<div class="row">
+		<div class="col-md-6">
+		<!-- Train info -->
+			<div class="panel panel-primary" style="background-color: rgba(0,0,0,.7); color: white; border-color: #006600;">
+				<div class="panel-heading" style="background-color: #004d38; border-color: #006600;">
+					<h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+				</div>
+				<div class="panel-body">
+					<table class="table" id="addTrain">
+						<thead>
+							<tr>
+								<th>Train Name</th>
+								<th>Destination</th>
+								<th>Frequency (min)</th>
+								<th>Next Arrival</th>
+								<th>Minutes Away</th>
+							</tr>
+						</thead>
+						<tbody>
 
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 
+		<div class="col-md-6">
+			<!-- Form to add a train -->
+			<div class="panel panel-primary" style="background-color: rgba(0,0,0,.7); color: white; border-color: #006600;">
+				<div class="panel-heading" style="background-color: #004d38; border-color: #006600;">
+					<h3 class="panel-title"><strong>Add Train</strong></h3>
+				</div>
 
+				<div class="panel-body">
+				
+				<form>
+					<div class="form-group">
+						<label for="">Train Name</label>
+						<input type="text" class="form-control" id="trainForm">
+					</div>
 
+					<div class="form-group">
+						<label for="">Destination</label>
+						<input type="text" class="form-control" id="destinationForm">
+					</div>
 
+					<div class="form-group">
+						<label for="">First Train Time (HH:mm - military time)</label>
+						<input type="text" class="form-control" id="firstTrainForm">
+					</div>
 
+					<div class="form-group">
+						<label for="">Frequency (min)</label>
+						<input type="text" class="form-control" id="frequencyForm">
+					</div>
 
+					<button type="submit" class="btn btn-primary" id="submitTrain" style="background-color: #004d38; border-color: #006600;">Submit</button>
+				</form>
 
+				</div>
+			</div>
+		</div>
+	</div>
 
+</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/javascript/train.js"></script>
+	<script type="text/javascript" src="assets/javascript/moment.js"></script>
 
 </body>
 </html>
