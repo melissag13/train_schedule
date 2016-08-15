@@ -32,7 +32,7 @@ $("#submitTrain").on("click", function(){
 	$("#firstTrainForm").val("");
 	$("#frequencyForm").val("");
 
-	// Does't refresh the page
+	// Doesn't refresh the page
 	return false;
 });
 
@@ -52,6 +52,9 @@ database.ref("push").on("child_added", function(childSnapshot, prevChildKey){
 	var frequencyTrain = childSnapshot.val().frequency;
 	var trainFirst = childSnapshot.val().firstTrain;
 
+	console.log("trainFirst " + trainFirst);
+	console.log("frequency " + frequencyTrain);
+
 	/* 
 	To calculate the minutes when the next train will arrive, take the current time in unix subtract 
 	the firstTrain time and find the modulus between the difference and the frequency 
@@ -62,11 +65,12 @@ database.ref("push").on("child_added", function(childSnapshot, prevChildKey){
 
 	// To calculate the arrival time, add the timeMinutes to the currrent time
 	var timeArrive = moment().add(timeMinutes, "minutes").format("hh:mm A");
-	
-	console.log(timeMinutes);
-	console.log(timeArrive);
-	console.log(moment().format("hh:mm A"));
-	console.log(timeArrive);
+
+	console.log("Diff in time " + diffTime);
+	console.log("Time remainder " + timeMod)
+	console.log("frequency - remainder: " + timeMinutes);
+	console.log("Current time: " + moment().format("hh:mm A"));
+	console.log("Time train arrives: " + timeArrive);
 	
 
 	// Add each train's data into the table
