@@ -16,7 +16,7 @@ $("#submitTrain").on("click", function(){
 	var train = $("#trainForm").val().trim();
 	var destination = $("#destinationForm").val().trim();
 	var firstTrain = moment($("#firstTrainForm").val().trim(), "HH:mm").subtract(1, "years").format("hh:mm");
-	var frequency = $("#frequencyForm").val().trim
+	var frequency = $("#frequencyForm").val().trim();
 
 	// Code for handling the push
 	database.ref("push").push({
@@ -62,9 +62,9 @@ database.ref("push").on("child_added", function(childSnapshot, prevChildKey){
 
 	// To calculate the arrival time, add the timeMinutes to the currrent time
 	var timeArrive = moment().add(timeMinutes, "minutes").format("hh:mm A");
+	
 	console.log(timeMinutes);
 	console.log(timeArrive);
-
 	console.log(moment().format("hh:mm A"));
 	console.log(timeArrive);
 	
