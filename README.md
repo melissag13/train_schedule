@@ -17,8 +17,8 @@
 ###Instructions:
 
 * To get the train schedule, the user will enter the train name, destination, arrival time, and frequency in minutes.
-* This app will calculate when the next train will arrive; this should be relatvie to the current time.
-* Users from many different machines will be able to view same train times.
+* This app will calculate when the next train will arrive; this should be relative to the current time.
+* Users from different computers/devices will be able to view the same train schedule/times.
 
 
 
